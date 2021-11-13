@@ -1,10 +1,12 @@
 # motion-photo-extractor
 
+A fork for personal use
+
 ## What this does
 
-It's a command line ruby script that splits your Samsung motion photos in to a (now smaller) jpg and a mp4. Samsung saves files into 
+It's a command line ruby script that splits your Samsung motion photos in to a (now smaller) jpg and a mp4. Samsung phones save motion as metadata "MotionPhoto_Data" viewable with `exiftool` under "Embedded Video Type" and "Embedded Video File". 
 
-The files will be saved in the same folder the original image.
+The files will be saved in the same folder as the original image.
 
 ## Setup
 
@@ -14,11 +16,11 @@ The files will be saved in the same folder the original image.
 
 ## Examples of use
 
-$ motionPhotoExtractor.rb -p /Users/YourName/Desktop/Desktop/FolderWithMotionPhotosInIt
+`$ motionPhotoExtractor.rb -p /Users/YourName/Desktop/Desktop/FolderWithMotionPhotosInIt`
 
 or
 
-$ motionPhotoExtractor.rb -p /Users/YourName/Desktop/Desktop/FolderWithMotionPhotosInIt/OnePhoto.jpg
+`$ motionPhotoExtractor.rb -p /Users/YourName/Desktop/Desktop/FolderWithMotionPhotosInIt/OnePhoto.jpg`
 
 ## Options
 
