@@ -2,7 +2,7 @@
 
 ## What this does
 
-It's a command line ruby script that splits your S7/S7 Edge motion photos in to a (now smaller) jpg and a mp4.
+It's a command line ruby script that splits your Samsung motion photos in to a (now smaller) jpg and a mp4. Samsung saves files into 
 
 The files will be saved in the same folder the original image.
 
@@ -22,10 +22,9 @@ $ motionPhotoExtractor.rb -p /Users/YourName/Desktop/Desktop/FolderWithMotionPho
 
 ## Options
 
-$ motionPhotoExtractor.rb [options]
-
-| Short | Long           | Description
-| ------|--------------- | --------------------
-| -p    | --path=PATH    | Path of the Motion Photos photo folder
-| -v    | --[no-]delete  | Delete the original image after split
-| -h    | --help         | Prints help
+```
+Usage: motionPhotoExtractor.rb [options]
+-р, --рath-PАТН    Path of the image / folder of images you want to extract the motion from
+-d, --delete       Keep only pictures (remove mp4 and original image)
+-h, --help         Prints this help
+```
