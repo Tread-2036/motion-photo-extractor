@@ -9,13 +9,13 @@ def parse_options()
     options = {}
 
     optparse = OptionParser.new do |opts|
-        opts.banner = "Usage: motionPhoto.rb [options]"
+        opts.banner = "Usage: motionPhotoExtractor.rb [options]"
 
         opts.on("-p", "--path=PATH", "Path of the image / folder of images you want to extract the motion from") do |path|
             options[:path] = path
         end
 
-        opts.on("-d", "--delete", "delete original files") do |d|
+        opts.on("-d", "--delete", "Keep only pictures (remove mp4 and original image)") do |d|
             options[:delete] = d
         end
 
@@ -61,6 +61,8 @@ def extract_and_save(name, file_path, bar)
             File.open("#{file_path}/#{name}_Extracted.mp4", 'wb') { |file| file.write(data[1]) }
             if $DELETE
                 File.delete("#{file_path}/#{name}.jpg")
+                File.delete("#{file_path}/#{name}_Extracted.mp4")
+                File.rename("#{file_path}/#{name}_Extracted.jpg", "#{file_path}/#{name}.jpg")
             end
         else
             bar.log "#{name} - Not a MotionPhoto"
